@@ -41,7 +41,23 @@
             <task id="6" name="Prêts de matériels (client)" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
             <task id="7" name="Gestion des prêts" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
             <task id="8" name="Commandes des plateaux repas" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="9" name="Gestion i/o clients ou membres" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
+            <task id="9" name="Gestion i/o clients ou membres" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[Mettre en place un QrCode généré pour chaque utilisateur afin d'enregistrer les mouvements de l'utilisateur dans l'espace de travail
+
+
+
+
+Enregistrer les entrées-sorties dans un fichier XML
+=> id openspace/JJMMAA => ex : 01basti150118.xml
+
+Envoyer les fichiers au service informatique central pour achivage
+
+
+
+Application permettant de fusionner tous les fichiers des différents espaces en un seul (JJ) enregistré dans un répertoire de nom MMAA]]>
+                </notes>
+            </task>
         </task>
         <task id="10" name="Mission 2 : Gestion de Tickets" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true">
             <task id="11" name="Suivi du matériel (VOIR NOTES)" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
