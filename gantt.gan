@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-02-12" view-index="0" gantt-divider-location="395" resource-divider-location="300" version="2.8.6" locale="fr_FR">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-01-29" view-index="0" gantt-divider-location="395" resource-divider-location="300" version="2.8.6" locale="fr_FR">
     <description/>
-    <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="230" order="0"/>
+    <view zooming-state="default:4" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="218" order="0"/>
         <field id="tpd4" name="Date de début" width="80" order="1"/>
-        <field id="tpd5" name="Date de fin" width="79" order="2"/>
+        <field id="tpd5" name="Date de fin" width="76" order="2"/>
+        <option id="color.recent">
+            <![CDATA[#66ff99 #3399ff #33cc00 #ff3333]]>
+        </option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="209" order="0"/>
@@ -33,17 +36,18 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Mission 1 : Gestion Client" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true">
-            <task id="2" name="Formulaire Inscription" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="3" name="Formulaire Connexion" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="4" name="Modification informations générales" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="5" name="Réservation d'espaces privatifs" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="6" name="Prêts de matériels (client)" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="7" name="Gestion des prêts" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="8" name="Commandes des plateaux repas" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="9" name="Gestion i/o clients ou membres" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+        <task id="0" name="Mission 1 : Gestion Client" meeting="false" start="2018-02-12" duration="32" complete="0" expand="true">
+            <task id="2" name="Formulaire Inscription" color="#ff3333" meeting="false" start="2018-02-21" duration="2" complete="0" thirdDate="2018-02-21" thirdDate-constraint="0" expand="true"/>
+            <task id="3" name="Formulaire Connexion" color="#ff3333" meeting="false" start="2018-02-21" duration="2" complete="0" thirdDate="2018-02-21" thirdDate-constraint="0" expand="true"/>
+            <task id="4" name="Modification informations générales" color="#ff3333" meeting="false" start="2018-02-22" duration="2" complete="0" thirdDate="2018-02-22" thirdDate-constraint="0" expand="true"/>
+            <task id="5" name="Réservation d'espaces privatifs" color="#ff3333" meeting="false" start="2018-02-23" duration="6" complete="0" thirdDate="2018-02-23" thirdDate-constraint="0" expand="true"/>
+            <task id="6" name="Prêts de matériels (client)" color="#ff3333" meeting="false" start="2018-03-02" duration="6" complete="0" thirdDate="2018-03-02" thirdDate-constraint="0" expand="true"/>
+            <task id="7" name="Gestion des prêts" color="#ff3333" meeting="false" start="2018-03-09" duration="8" complete="0" thirdDate="2018-03-09" thirdDate-constraint="0" expand="true"/>
+            <task id="8" name="Commandes des plateaux repas" color="#ff3333" meeting="false" start="2018-03-20" duration="6" complete="0" thirdDate="2018-03-20" thirdDate-constraint="0" expand="true"/>
+            <task id="9" name="Gestion i/o clients ou membres" color="#ff3333" meeting="false" start="2018-02-12" duration="7" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
                 <notes>
-                    <![CDATA[Mettre en place un QrCode généré pour chaque utilisateur afin d'enregistrer les mouvements de l'utilisateur dans l'espace de travail
+                    <![CDATA[
+                    Mettre en place un QrCode généré pour chaque utilisateur afin d'enregistrer les mouvements de l'utilisateur dans l'espace de travail
 
 
 
@@ -55,85 +59,110 @@ Envoyer les fichiers au service informatique central pour achivage
 
 
 
-Application permettant de fusionner tous les fichiers des différents espaces en un seul (JJ) enregistré dans un répertoire de nom MMAA]]>
-                </notes>
-            </task>
-        </task>
-        <task id="10" name="Mission 2 : Gestion de Tickets" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true">
-            <task id="11" name="Suivi du matériel (VOIR NOTES)" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
-                <notes>
-                    <![CDATA[
-                    - Identification du matériel
-- Emplacement du matériel
-- Problèmes rencontrés
+Application permettant de fusionner tous les fichiers des différents espaces en un seul (JJ) enregistré dans un répertoire de nom MMAA
                 ]]>
                 </notes>
             </task>
-            <task id="12" name="Réparations et maintenance materielles ou logiciel" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+        </task>
+        <task id="10" name="Mission 2 : Gestion de Tickets" meeting="false" start="2018-03-28" duration="28" complete="0" expand="true">
+            <task id="11" name="Suivi du matériel (VOIR NOTES)" color="#33cc00" meeting="false" start="2018-03-28" duration="5" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
                 <notes>
                     <![CDATA[
+                    
+                    - Identification du matériel
+- Emplacement du matériel
+- Problèmes rencontrés
+                
+                ]]>
+                </notes>
+            </task>
+            <task id="12" name="Réparations et maintenance materielles ou logiciel" color="#33cc00" meeting="false" start="2018-04-03" duration="7" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[
+                    
                     
                     Faire un système de tickets pour suivre les opérations en cours
 Il contiendra entre autre la description et l'état du tiket
 
                 
-                ]]>
-                </notes>
-            </task>
-            <task id="14" name="Tickets (VOIR NOTES)" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
-                <notes>
-                    <![CDATA[
-                    
-                    Emission d'un ticket, phase de suivi - ouvert, nouveau, en cours, résolu, en attente, en retard)
                 
                 ]]>
                 </notes>
             </task>
-            <task id="15" name="Gestion du matériel" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+            <task id="14" name="Tickets (VOIR NOTES)" color="#33cc00" meeting="false" start="2018-04-11" duration="10" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
                 <notes>
                     <![CDATA[
+                    
+                    
+                    Emission d'un ticket, phase de suivi - ouvert, nouveau, en cours, résolu, en attente, en retard)
+                
+                
+                ]]>
+                </notes>
+            </task>
+            <task id="15" name="Gestion du matériel" color="#33cc00" meeting="false" start="2018-04-24" duration="5" complete="0" thirdDate="2018-04-24" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[
+                    
                     
                     Besoin de la fonction de gestion du matérielle de la mission 1.
 Elle est nécessaire pour assurer le suivi avec les tickets
 
                 
+                
                 ]]>
                 </notes>
             </task>
-            <task id="19" name="Exportation au format EXCEL" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+            <task id="19" name="Exportation au format EXCEL" color="#33cc00" meeting="false" start="2018-04-30" duration="5" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
                 <notes>
                     <![CDATA[
                     
+                    
                     Exporter les tickets contenu dans la base pour en faire un fichier EXCEL
 
+                
                 
                 ]]>
                 </notes>
             </task>
         </task>
-        <task id="24" name="Mission 3 : Architecture Réseau" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true">
-            <task id="25" name="Diagramme de gantt" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true"/>
-            <task id="26" name="Matrice RACI (VOIR NOTES)" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+        <task id="24" name="Mission 3 : Architecture Réseau" meeting="false" start="2018-02-12" duration="61" complete="0" expand="true">
+            <task id="25" name="Diagramme de gantt" color="#3399ff" meeting="false" start="2018-02-12" duration="5" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true"/>
+            <task id="26" name="Matrice RACI (VOIR NOTES)" color="#3399ff" meeting="false" start="2018-02-16" duration="3" complete="0" thirdDate="2018-02-16" thirdDate-constraint="0" expand="true">
                 <notes>
                     <![CDATA[
+                    
                     
                     Faire une matrice RACI (Responsible, Accountable, Consulted, Informed) pour les tâches définies dans le diagramme de Gantt
                 
-                ]]>
-                </notes>
-            </task>
-            <task id="28" name="Analyse des risques (VOIR NOTES)" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
-                <notes>
-                    <![CDATA[
-                    
-                    Analyse des risques en utilisant la méthode EBIOS ou la méthode Méhari
                 
                 ]]>
                 </notes>
             </task>
-            <task id="30" name="Financement" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+            <task id="33" name="Maquette réseau" color="#3399ff" meeting="false" start="2018-02-14" duration="5" complete="0" thirdDate="2018-02-14" thirdDate-constraint="0" expand="true">
                 <notes>
                     <![CDATA[
+                        
+                        Une maquette dans le style Packet Tracer fonctionnelle représentant l'ensemble du réseau informatique de la société (8 sites)
+                    
+                    ]]>
+                </notes>
+            </task>
+            <task id="28" name="Analyse des risques (VOIR NOTES)" color="#3399ff" meeting="false" start="2018-02-22" duration="18" complete="0" thirdDate="2018-02-22" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[
+                    
+                    
+                    Analyse des risques en utilisant la méthode EBIOS ou la méthode Méhari
+                
+                
+                ]]>
+                </notes>
+            </task>
+            <task id="30" name="Financement" color="#3399ff" meeting="false" start="2018-03-19" duration="7" complete="0" thirdDate="2018-03-14" thirdDate-constraint="0" expand="true">
+                <notes>
+                    <![CDATA[
+                    
                     Faire une proposition financière pour l'acquisition du matériel, des éventuelles licences, du cablage, du déploiement...
 
 Recenser tous les centres de coûts inhérents à cette mission
@@ -141,45 +170,54 @@ Recenser tous les centres de coûts inhérents à cette mission
 
 
 => Appel d'offre ?
+                
                 ]]>
                 </notes>
             </task>
-            <task id="32" name="Volet Technique" meeting="false" start="2018-02-12" duration="1" complete="0" expand="true">
-                <task id="33" name="Maquette réseau" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+            <task id="104" name="Configuration maquette réseau" color="#3399ff" meeting="false" start="2018-03-27" duration="14" complete="0" thirdDate="2018-03-22" thirdDate-constraint="0" expand="true"/>
+            <task id="32" name="Volet Technique" meeting="false" start="2018-04-13" duration="17" complete="0" expand="true">
+                <task id="36" name="Présentation NAT/PAT" color="#3399ff" meeting="false" start="2018-04-13" duration="5" complete="0" thirdDate="2018-04-13" thirdDate-constraint="0" expand="true">
                     <notes>
                         <![CDATA[
-                        Une maquette dans le style Packet Tracer fonctionnelle représentant l'ensemble du réseau informatique de la société (8 sites)
-                    ]]>
-                    </notes>
-                </task>
-                <task id="36" name="Présentation NAT/PAT" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
-                    <notes>
-                        <![CDATA[
+                        
                         Le NAT/PAT devra être configuré sur chacun des routeurs pour permettre aux salariés et aux clients d'avoir accès à internet
+                    
                     ]]>
                     </notes>
                 </task>
-                <task id="38" name="Présentation des VPN Ipsec" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+                <task id="38" name="Présentation des VPN Ipsec" color="#3399ff" meeting="false" start="2018-04-19" duration="5" complete="0" thirdDate="2018-04-23" thirdDate-constraint="0" expand="true">
                     <notes>
                         <![CDATA[
+                        
                         - Chaque site devra disposer de 7 tunnels IPsec (un vers chaque autre site)
 - Du routage dynamique sur le réseau VPN (Ipsec over Gre)
+                    
                     ]]>
                     </notes>
                 </task>
-                <task id="40" name="Présentation des VLAN" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+                <task id="40" name="Présentation des VLAN" color="#3399ff" meeting="false" start="2018-04-25" duration="5" complete="0" thirdDate="2018-05-25" thirdDate-constraint="0" expand="true">
                     <notes>
                         <![CDATA[
+                        
                         Chaque site aura 2 VLANs (un pour les clients, un pour les salariés)
+                    
                     ]]>
                     </notes>
                 </task>
-                <task id="42" name="Solution centralisée pour les logs" color="#8cb6ce" meeting="false" start="2018-02-12" duration="1" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true">
+                <task id="42" name="Solution centralisée pour les logs" color="#3399ff" meeting="false" start="2018-05-01" duration="5" complete="0" thirdDate="2018-04-24" thirdDate-constraint="0" expand="true">
                     <notes>
-                        <![CDATA[Un serveur syslog sur le site de Bastille sera configuré à cet effet]]>
+                        <![CDATA[
+                        Un serveur syslog sur le site de Bastille sera configuré à cet effet
+                    ]]>
                     </notes>
                 </task>
             </task>
+        </task>
+        <task id="46" name="Documents" meeting="false" start="2018-02-12" duration="7" complete="0" expand="true">
+            <task id="47" name="Diagramme de gantt" color="#66ff99" meeting="false" start="2018-02-12" duration="5" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true"/>
+            <task id="48" name="Chiffrage Financier" color="#66ff99" meeting="false" start="2018-02-15" duration="3" complete="0" thirdDate="2018-02-15" thirdDate-constraint="0" expand="true"/>
+            <task id="49" name="Définition du logo" color="#66ff99" meeting="false" start="2018-02-12" duration="7" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true"/>
+            <task id="50" name="Descriptif fonctionnel détaillé" color="#66ff99" meeting="false" start="2018-02-12" duration="7" complete="0" thirdDate="2018-02-12" thirdDate-constraint="0" expand="true"/>
         </task>
     </tasks>
     <resources/>
