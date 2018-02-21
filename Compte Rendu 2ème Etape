@@ -12,10 +12,12 @@ FAI
 Routeur 2911
 1x HWIC-2T
 Lien Sérial DCE
+s0/0/0
 
 
 Routeur 1841
 1x HWIC-2T
+s0/0/0
 
 
 VLAN sur switch pour réseau Client et Salarié
