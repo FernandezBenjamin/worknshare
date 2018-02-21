@@ -1,1 +1,27 @@
 Bonne maquette. Enlever les Switchs et mettre VLANs à la place
+
+
+
+
+
+
+Maquette packet tracer
+
+
+FAI
+Routeur 2911
+1x HWIC-2T
+Lien Sérial
+
+
+Routeur 1841
+1x HWIC-2T
+
+
+VLAN sur switch pour réseau Client et Salarié
+
+
+Proposer plan d'adressage
+
+
+F0/0 Ou G0/0 --> Serveur 8.8.8.0 ou 8.8.8.1
