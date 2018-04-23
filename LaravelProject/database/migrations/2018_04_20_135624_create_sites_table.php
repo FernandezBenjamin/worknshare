@@ -17,6 +17,7 @@ class CreateSitesTable extends Migration
             $table->increments('id');
             $table->string('city',60);
             $table->text('hours');
+            $table->string('filename',255);
             $table->timestamps();
         });
     }

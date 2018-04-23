@@ -13,12 +13,12 @@ class CreateRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rooms', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_place',false,true);
-            $table->integer('id_room',false,true);
+        Schema::create('rooms_sites', function (Blueprint $table) {
+            $table->integer('sites_id',false,true);
+            $table->integer('rooms_id',false,true);
             $table->integer('quantity',false,true);
             $table->timestamps();
+            $table->primary(['sites_id','rooms_id']);
         });
     }
 
@@ -31,6 +31,6 @@ class CreateRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rooms');
+        Schema::dropIfExists('rooms_sites');
     }
 }

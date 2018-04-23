@@ -13,10 +13,11 @@ class CreateListOfRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('list_of_rooms', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('room_name');
+            $table->string('room_name')->unique();
             $table->text('description');
+            $table->string('short_name',40)->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateListOfRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('list_of_rooms');
+        Schema::dropIfExists('rooms');
     }
 }

@@ -13,10 +13,11 @@ class CreateListOfServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('list_of_services', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('service_name');
+            $table->string('service_name')->unique();
             $table->text('description');
+            $table->string('short_name',40)->unique();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateListOfServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('list_of_services');
+        Schema::dropIfExists('services');
     }
 }

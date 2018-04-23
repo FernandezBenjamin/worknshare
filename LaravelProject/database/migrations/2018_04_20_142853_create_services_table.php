@@ -13,12 +13,12 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('id_place',false);
-            $table->unsignedInteger('id_service',false);
-            $table->unsignedInteger('quantity',false);
+        Schema::create('services_sites', function (Blueprint $table) {
+            $table->unsignedInteger('sites_id',false);
+            $table->unsignedInteger('services_id',false);
+            $table->boolean('contains');
             $table->timestamps();
+            $table->primary(['sites_id','services_id']);
         });
     }
 
@@ -29,6 +29,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('services_sites');
     }
 }

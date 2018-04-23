@@ -113,4 +113,44 @@ function notification(text,succes){
 
 
 
+function revele() {
+    var select = document.getElementById('sites');
+    if (select.value != null){
+        document.getElementById('revele').style.display = "block";
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if(dd<10) {
+            dd = '0'+dd
+        }
+
+        if(mm<10) {
+            mm = '0'+mm
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById('reserveDate').setAttribute("min",today);
+
+        mm = parseInt(mm) + 2;
+        if (mm < 10){
+            var ze = "0";
+            mm =  ze.concat(mm);
+        }
+        today = yyyy + '-' + mm + '-' + dd;
+        document.getElementById('reserveDate').setAttribute("max",today);
+
+
+
+    } else {
+        document.getElementById('revele').style.display = "none";
+    }
+
+
+}
+
+
+
 

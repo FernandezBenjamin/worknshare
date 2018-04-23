@@ -54,6 +54,7 @@
         </div>
         <div class="link">
             <a href="/">Accueil</a>
+            <a href="{{ URL::previous() }}">Précédent</a>
         </div>
     </div>
 </div>

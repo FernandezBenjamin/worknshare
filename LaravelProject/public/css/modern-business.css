@@ -289,3 +289,28 @@ div.notification p{
 }
 
 
+
+div.content{
+    margin-bottom:50px;
+}
+
+div.content div.container{
+    margin-top:50px;
+}
+
+div.form-group label{
+    padding-top:40px;
+}
+
+
+label.upload{
+    margin-top: 20px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+label.upload input{
+    margin: 0;
+}

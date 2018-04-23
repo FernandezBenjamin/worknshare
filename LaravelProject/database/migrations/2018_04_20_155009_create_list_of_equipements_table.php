@@ -13,9 +13,11 @@ class CreateListOfEquipementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('list_of_equipements', function (Blueprint $table) {
+        Schema::create('equipements', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('equipement_name');
+            $table->string('equipement_name')->unique();
+            $table->text('description');
+            $table->string('short_name',40)->unique();
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateListOfEquipementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('list_of_equipements');
+        Schema::dropIfExists('equipements');
     }
 }

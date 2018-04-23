@@ -11,10 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
+Route::get('/', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'admin'], function() {
+    Route::get('/admin','UserController@admin');
+    Route::post('/admin','UserController@admin');
 });
 
+Route::get('/register', 'RegistrationController@create');
+Route::post('/register', 'RegistrationController@store');
 
-Route::get('/signup', 'UserController@signup');
-Route::get('/signin', 'UserController@signin');
+
+Route::get('/login', 'SessionsController@create');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
+
+
+Route::get('/ajouter-un-site', 'SitesController@create');
+Route::post('/ajouter-un-site', 'SitesController@store');
+
+Route::get('/reserver-un-espace', 'RoomsController@reserve');
+Route::post('/reserver-un-espace', 'RoomsController@store');
+
+

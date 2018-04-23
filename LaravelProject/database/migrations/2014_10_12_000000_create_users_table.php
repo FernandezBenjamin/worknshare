@@ -14,15 +14,15 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id_user');
-            $table->string('email')->unique();
+            $table->increments('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('pwd');
-            $table->boolean('is_deleted')->default(false);
-            $table->boolean('is_admin')->default(false);
-            $table->boolean('is_ban')->default(false);
-            $table->text('ban_reasons')->nullable();
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->boolean('isDeleted')->default(false);
+            $table->boolean('isAdmin')->default(false);
+            $table->boolean('isBan')->default(false);
+            $table->text('banReasons')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

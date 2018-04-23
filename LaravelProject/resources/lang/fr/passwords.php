@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'password' => 'Le mot de passe doit faire au moins 6 caractères et correspondre à la confirmation.',
+    'password' => 'Le mot de passe doit faire au moins 8 caractères et correspondre à la confirmation.',
     'reset' => 'Votre mot de passe a été réinitialisé !',
     'sent' => 'Un mail de réinitialisation de mot de passe a été envoyé !',
     'token' => 'Cette clé de restauration de mot de passe est invalide.',

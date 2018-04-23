@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Les informations ne correspondent pas avec notre registre.',
+    'failed' => 'Les informations ne correspondent pas avec notre bases de données.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];
