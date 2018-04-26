@@ -13,16 +13,14 @@ class CreateRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rooms_sites', function (Blueprint $table) {
-            $table->integer('sites_id',false,true);
-            $table->integer('rooms_id',false,true);
-            $table->integer('quantity',false,true);
+        Schema::create('rooms', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('room_name')->unique();
+            $table->text('description');
+            $table->string('short_name',40)->unique();
             $table->timestamps();
-            $table->primary(['sites_id','rooms_id']);
         });
     }
-
-
 
     /**
      * Reverse the migrations.
@@ -31,6 +29,6 @@ class CreateRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rooms_sites');
+        Schema::dropIfExists('rooms');
     }
 }

@@ -21,7 +21,6 @@ class HomeController extends Controller
         $sites = Sites::with(['equipements','services','rooms'])->get();
 
 
-
         return view('home.homepage', compact(['sites']));
     }
 }

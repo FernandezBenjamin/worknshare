@@ -39,10 +39,10 @@
 
                     @if(Auth::check() && auth()->user()->isAdmin )
                         <li class="nav-item">
-                            <a class="nav-link" href="add-new-site">Ajouter un site</a>
+                            <a class="nav-link" href="ajouter-un-site">Ajouter un site</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="admin">Administration</a>
+                            <a class="nav-link" href="administration">Administration</a>
                         </li>
                     @endif
                     <li class="nav-item">

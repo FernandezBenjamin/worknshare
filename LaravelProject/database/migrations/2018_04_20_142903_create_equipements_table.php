@@ -13,13 +13,12 @@ class CreateEquipementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('equipements_sites', function (Blueprint $table) {
-            $table->integer('sites_id',false,false);
-            $table->integer('equipements_id',false,false);
-            $table->integer('quantity',false,true);
+        Schema::create('equipements', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('equipement_name')->unique();
+            $table->text('description');
+            $table->string('short_name',40)->unique();
             $table->timestamps();
-            $table->primary(['sites_id','equipements_id']);
-
         });
     }
 
@@ -30,6 +29,6 @@ class CreateEquipementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipements_sites');
+        Schema::dropIfExists('equipements');
     }
 }

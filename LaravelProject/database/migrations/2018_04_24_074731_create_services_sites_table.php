@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateListOfServicesTable extends Migration
+class CreateServicesSitesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateListOfServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('service_name')->unique();
-            $table->text('description');
-            $table->string('short_name',40)->unique();
+        Schema::create('services_sites', function (Blueprint $table) {
+            $table->unsignedInteger('sites_id',false);
+            $table->unsignedInteger('services_id',false);
+            $table->boolean('contains');
             $table->timestamps();
+            $table->primary(['sites_id','services_id']);
         });
     }
 
@@ -29,6 +29,6 @@ class CreateListOfServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('services_sites');
     }
 }

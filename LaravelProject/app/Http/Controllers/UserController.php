@@ -16,4 +16,6 @@ class UserController extends Controller
     public function signin(){
         return view('user.signin');
     }
+
+
 }

@@ -119,28 +119,16 @@ function revele() {
         document.getElementById('revele').style.display = "block";
 
         var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth()+1; //January is 0!
-        var yyyy = today.getFullYear();
+        today = today.parseTodayDate();
 
-        if(dd<10) {
-            dd = '0'+dd
-        }
+        
 
-        if(mm<10) {
-            mm = '0'+mm
-        }
-
-        today = yyyy + '-' + mm + '-' + dd;
         document.getElementById('reserveDate').setAttribute("min",today);
 
-        mm = parseInt(mm) + 2;
-        if (mm < 10){
-            var ze = "0";
-            mm =  ze.concat(mm);
-        }
-        today = yyyy + '-' + mm + '-' + dd;
-        document.getElementById('reserveDate').setAttribute("max",today);
+        var todayPlusTwoMonth = new Date();
+        todayPlusTwoMonth = todayPlusTwoMonth.parseTodayDateWithExtrasMonths(2);
+
+        document.getElementById('reserveDate').setAttribute("max",todayPlusTwoMonth);
 
 
 
@@ -148,6 +136,35 @@ function revele() {
         document.getElementById('revele').style.display = "none";
     }
 
+
+}
+
+
+
+function checkDate() {
+
+    var reserveDate = document.getElementById('reserveDate');
+
+
+    var today = new Date();
+    today = today.parseTodayDate();
+
+    var todayPlusTwoMonth = new Date();
+    todayPlusTwoMonth = todayPlusTwoMonth.parseTodayDateWithExtrasMonths(2);
+    if (reserveDate.value < todayPlusTwoMonth && reserveDate.value > today){
+
+
+        var date = document.getElementById('reserveDate').value;
+        var type = document.getElementById('rooms').value;
+        var sites = document.getElementById('sites').value;
+
+
+
+        SpacesController.checkDate(date,type,sites,function (check) {
+            console.log(check);
+        })
+
+    }
 
 }
 

@@ -13,8 +13,10 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'admin'], function() {
-    Route::get('/admin','UserController@admin');
-    Route::post('/admin','UserController@admin');
+    Route::get('/administration','AdminController@admin');
+    Route::get('/liste-des-utilisateurs','AdminController@getUsers');
+    Route::get('/liste-des-utilisateurs/{page}','AdminController@getUsersPage');
+    Route::post('/administration','AdminController@admin');
 });
 
 Route::get('/register', 'RegistrationController@create');
@@ -28,6 +30,7 @@ Route::get('/logout', 'SessionsController@destroy');
 
 Route::get('/ajouter-un-site', 'SitesController@create');
 Route::post('/ajouter-un-site', 'SitesController@store');
+Route::post('/getSpaces', 'SitesController@getSpaces');
 
 Route::get('/reserver-un-espace', 'RoomsController@reserve');
 Route::post('/reserver-un-espace', 'RoomsController@store');

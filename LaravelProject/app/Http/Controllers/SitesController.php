@@ -19,9 +19,9 @@ class SitesController extends Controller
 
     public function create(){
 
-        $services = ListOfServices::all();
-        $rooms = ListOfRooms::all();
-        $equipements = ListOfEquipements::all();
+        $services = Services::all();
+        $rooms = Rooms::all();
+        $equipements = Equipements::all();
 
         return view('administration.site.create',compact(['services','rooms','equipements']));
     }
@@ -101,5 +101,14 @@ class SitesController extends Controller
 
         return redirect('/add_new_site');
 
+    }
+
+
+    public function getSpaces(){
+
+        $request = [];
+        $request[] = request();
+
+        return view('utils.spaces.getSpaces');
     }
 }
