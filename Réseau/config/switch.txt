@@ -1,0 +1,15 @@
+en
+  conf t
+    int fa0/1
+      switchport mode trunk
+      no shutdown
+      exit
+    int fa1/1
+      switchport mode acces
+      switchport acces vlan 3
+      exit
+    int fa2/1
+      switchport mode acces
+      switchport acces vlan 2
+      exit
+    do write
