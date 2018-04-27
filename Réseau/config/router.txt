@@ -1,0 +1,16 @@
+enable
+  config ter
+    hostname BEAUBOURG
+    interface Serial0/1/0
+      ip addr 15.0.0.2 255.0.0.0
+      no shutdown
+      exit
+    interface FastEthernet0/0
+      ip addr 192.168.1.1 255.255.255.0
+      no shutdown
+      exit
+    router rip
+      network 192.168.1.0
+      network 15.0.0.0
+      exit
+    do write
