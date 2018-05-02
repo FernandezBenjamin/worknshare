@@ -5,3 +5,11 @@ Back end
 	recherche
 	création
 	modification
+
+
+
+XmlFusion
+	Faire de façon automique
+	configuration grâce un fichier .conf
+	Gérer les erreurs
+	
