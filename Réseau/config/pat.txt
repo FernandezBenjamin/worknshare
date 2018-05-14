@@ -1,0 +1,5 @@
+enable
+  config ter
+    access-list 2 permit 192.168.3.0 0.0.0.255
+    access-list 2 permit 192.168.4.0 0.0.0.255
+    ip nat inside source list 2 interface Serial0/1/0 overload
