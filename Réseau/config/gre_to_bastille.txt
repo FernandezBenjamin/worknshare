@@ -1,0 +1,24 @@
+en
+  conf ter
+    crypto isakmp policy 10
+      authentication pre-share
+
+    crypto isakmp key ciscokey address 192.168.1.254
+
+    crypto ipsec transform-set to_BASTILLE esp-des esp-md5-hmac
+
+    crypto map myvpn 10 ipsec-isakmp
+      set peer 192.168.1.254
+      set transform-set to_BASTILLE
+      match address 101
+
+    interface Tunnel0
+      ip address 172.16.10.11 255.240.0.0
+      tunnel source Serial0/1/0
+      tunnel destination 10.0.0.2
+
+    interface Serial0/1/0
+      crypto map myvpn
+
+    access-list 101 permit ip 192.168.3.0 0.0.0.255 192.168.1.0 0.0.0.255
+    do wr
