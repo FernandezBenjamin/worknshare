@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-04-20" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.6" locale="fr">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="166" order="0"/>
+        <field id="tpd4" name="Date de début" width="64" order="1"/>
+        <field id="tpd5" name="Date de fin" width="64" order="2"/>
+        <option id="color.recent">
+            <![CDATA[#33ff99 #66ccff #ff9900 #33cc00 #ff0000 #3366ff]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="209" order="0"/>
+        <field id="1" name="Rôle par défaut" width="85" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Définitions du besoins" meeting="false" start="2018-03-02" duration="5" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <depend id="16" type="2" difference="0" hardness="Strong"/>
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <task id="3" name="Matériel" color="#3366ff" meeting="false" start="2018-03-02" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true">
+                <depend id="4" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="4" name="Logiciel" color="#3366ff" meeting="false" start="2018-03-06" duration="3" complete="0" thirdDate="2018-03-06" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="19" name="Analyse des risques" color="#ff0000" meeting="false" start="2018-03-08" duration="3" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <depend id="16" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="14" name="Financement" meeting="false" start="2018-03-13" duration="5" complete="0" expand="true">
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <task id="16" name="Matériel" color="#ff9900" meeting="false" start="2018-03-13" duration="3" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true">
+                <depend id="17" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="17" name="Main d'oeuvre" color="#ff9900" meeting="false" start="2018-03-16" duration="2" complete="0" thirdDate="2018-03-06" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="5" name="Maquette réseau" meeting="false" start="2018-03-13" duration="10" complete="0" expand="true">
+            <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <task id="7" name="Création de la maquette" color="#33cc00" meeting="false" start="2018-03-13" duration="3" complete="0" thirdDate="2018-03-13" thirdDate-constraint="0" expand="true">
+                <depend id="11" type="2" difference="0" hardness="Strong"/>
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="8" name="Configuration de la maquette" meeting="false" start="2018-03-16" duration="7" complete="0" expand="false">
+                <task id="11" name="Routage" color="#33cc00" meeting="false" start="2018-03-16" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true">
+                    <depend id="12" type="2" difference="0" hardness="Strong"/>
+                    <depend id="13" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="12" name="VLAN" color="#33cc00" meeting="false" start="2018-03-20" duration="3" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true">
+                    <depend id="13" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="13" name="Test Maquette" color="#33cc00" meeting="false" start="2018-03-23" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="20" name="Déploiement du réseau" meeting="false" start="2018-03-27" duration="10" complete="0" expand="true">
+            <task id="22" name="Livraison du matériel" color="#66ccff" meeting="false" start="2018-03-27" duration="5" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" name="Configuration du matériel" color="#66ccff" meeting="false" start="2018-04-03" duration="5" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true">
+                <depend id="26" type="2" difference="0" hardness="Strong"/>
+                <depend id="28" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="24" name="Recette" meeting="false" start="2018-04-10" duration="5" complete="0" expand="true">
+            <task id="26" name="Test de la configuration" color="#8cb6ce" meeting="false" start="2018-04-10" duration="5" complete="0" thirdDate="2018-04-10" thirdDate-constraint="0" expand="true"/>
+            <task id="28" name="Test de la sécurité" color="#8cb6ce" meeting="false" start="2018-04-10" duration="5" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="29" name="Volet technique" meeting="false" start="2018-04-16" duration="8" complete="0" expand="true">
+            <task id="31" name="NAT/PAT" color="#33ff99" meeting="false" start="2018-04-16" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true"/>
+            <task id="32" name="VPN Ipsec" color="#33ff99" meeting="false" start="2018-04-18" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true"/>
+            <task id="33" name="VLAN" color="#33ff99" meeting="false" start="2018-04-20" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true"/>
+            <task id="35" name="Solution centralisée pour les logs" color="#33ff99" meeting="false" start="2018-04-24" duration="2" complete="0" thirdDate="2018-04-27" thirdDate-constraint="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
